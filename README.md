@@ -1,6 +1,6 @@
 # Nemeth_Gergo
 
-Jelenleg aktív, kezdő NFL-es irányítók passzolt yardjainak száma
+Jelenleg aktív, kezdő NFL-es irányítók passzolt yardjainak száma alapszakaszban
 
 ----MENÜ----
 

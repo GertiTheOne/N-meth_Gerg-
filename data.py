@@ -1,0 +1,2 @@
+iranyitok=[]
+yardok=[]

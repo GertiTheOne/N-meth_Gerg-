@@ -5,6 +5,7 @@ filename='Irányító.csv'
 
 def menu():
     system('cls')
+    print('----MENÜ----')
     print('0 - Kilépés')
     print('1 - Irányítók listázása')
     print('2 - Új irányító felvétle')
@@ -22,4 +23,11 @@ def fajlBeolvasas():
         iranyitok.append(darabolt[0])
         yardok.append(float(darabolt[1]))
     file.close()
+
+def iranyitoKiir():
+    system('cls')
+    print('----IRÁNYÍTÓK----')
+    for iranyito in iranyitok:
+        print(f'\t{iranyito}')
+    input('Tovább...')
 

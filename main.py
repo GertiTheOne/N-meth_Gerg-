@@ -6,7 +6,7 @@ choice=''
 while choice!='0':
     choice=menu()
     if choice=='1':
-        pass
+        iranyitoKiir()
     if choice=='2':
         pass
     if choice=='3':

@@ -35,7 +35,7 @@ def ujIranyito():
     system('cls')
     print('-----ÚJ IRÁNYÍTÓ-----')
     ujIranyito=input('Név: ')
-    ujYard=float(input('\tPasszolt Yardok száma: '))
+    ujYard=float(input('Passzolt Yardok száma: '))
     iranyitok.append(ujIranyito)
     yardok.append(ujYard)
     mentesFajlVegere(ujIranyito,ujYard)
@@ -49,7 +49,8 @@ def mentesFajlVegere(iranyito,yard):
 def iranyitoTorlese():
     system('cls')
     print('----IRÁNYÍTÓ TÖRLÉSE----\n')
-    
+    iranyitoNeve=int(input('Törlendő irányító: '))
+
     mentesFajlba()
     input('Sikeres törlés.')
 

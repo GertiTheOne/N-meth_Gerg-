@@ -8,9 +8,9 @@ while choice!='0':
     if choice=='1':
         iranyitoKiir()
     if choice=='2':
-        pass
+        ujIranyito()
     if choice=='3':
-        pass
+        iranyitoTorlese()
     if choice=='4':
         pass
     if choice=='5':

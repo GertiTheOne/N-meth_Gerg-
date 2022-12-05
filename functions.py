@@ -31,3 +31,32 @@ def iranyitoKiir():
         print(f'\t{iranyito}')
     input('Tovább...')
 
+def ujIranyito():
+    system('cls')
+    print('-----ÚJ IRÁNYÍTÓ-----')
+    ujIranyito=input('Név: ')
+    ujYard=float(input('\tPasszolt Yardok száma: '))
+    iranyitok.append(ujIranyito)
+    yardok.append(ujYard)
+    mentesFajlVegere(ujIranyito,ujYard)
+    input('Sikeres felvétel.')
+
+def mentesFajlVegere(iranyito,yard):
+    file=open('Irányító.csv','a',encoding='utf-8')
+    file.write(f'\n{iranyito};{yard}')
+    file.close() 
+
+def iranyitoTorlese():
+    system('cls')
+    print('----IRÁNYÍTÓ TÖRLÉSE----\n')
+    
+    mentesFajlba()
+    input('Sikeres törlés.')
+
+def mentesFajlba():
+    file=open('Irányító','w',encoding='utf-8')
+    for i in range(len(iranyitok)):
+        file.write(f'{iranyitok[i]};{yardok[i]}')
+        if i<len(iranyitok)-1:
+            file.write('\n')
+    file.close()

@@ -63,3 +63,47 @@ def mentesFajlba():
         if i<len(iranyitok)-1:
             file.write('\n')
     file.close()
+    
+def ujAdat():
+    system('cls')
+    print('-----ÚJ ADAT-----')
+    ujIranyito=input('Név: ')
+    ujYard=float(input('Új Adat: '))
+    if ujIranyito in iranyitok:
+        i = 0
+        while ujIranyito != iranyitok[i]:
+            i+=1
+        yardok[i]+=ujYard
+    else:
+        iranyitok.append(ujIranyito)
+        yardok.append(ujYard)
+    
+    f = open("Irányító.csv","w",encoding="utf-8")
+    f.write(f"Irányító;passzolt yardok\n")
+    for i in range(len(iranyitok)):
+        f.write(f"\n{iranyitok[i]};{yardok[i]}")
+        
+    f.close()
+    input('Sikeres felvétel.')
+
+def legtobbYard():
+    print('----LEGTÖBB YARD----')
+    max=0
+    maxindex=0
+    for i in range(len(yardok)):
+        if yardok[i]>max:
+            max=yardok[i]
+            maxindex=i
+    print(f'A legtöbb passzolt yard {max} {iranyitok[maxindex]} által')
+    input('Tovább...')
+
+def legkevesebbYard():
+    print('----LEGKEVESEBB YARD----')
+    min=99999
+    minindex=0
+    for i in range(len(yardok)):
+        if yardok[i]<min:
+            min=yardok[i]
+            minindex=i
+    print(f'A legkevesebb passzolt yard {min} {iranyitok[minindex]} által')
+    input('Tovább...')

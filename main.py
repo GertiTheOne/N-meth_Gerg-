@@ -12,8 +12,8 @@ while choice!='0':
     if choice=='3':
         iranyitoTorlese()
     if choice=='4':
-        pass
+        ujAdat()
     if choice=='5':
-        pass
+        legtobbYard()
     if choice=='6':
-        pass
+        legkevesebbYard()

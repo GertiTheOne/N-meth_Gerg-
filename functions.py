@@ -27,8 +27,8 @@ def fajlBeolvasas():
 def iranyitoKiir():
     system('cls')
     print('----IRÁNYÍTÓK----')
-    for iranyito in iranyitok:
-        print(f'\t{iranyito}')
+    for i in range(0,len(iranyitok)):
+        print(f'\t{i+1}. {(iranyitok[i])}: {yardok[i]} m')
     input('Tovább...')
 
 def ujIranyito():
@@ -49,8 +49,10 @@ def mentesFajlVegere(iranyito,yard):
 def iranyitoTorlese():
     system('cls')
     print('----IRÁNYÍTÓ TÖRLÉSE----\n')
-    iranyitoNeve=int(input('Törlendő irányító: '))
-
+    iranyitoKiir()
+    sSz=int(input('Törlendő irányító sorszáma: '))
+    iranyitok.pop(sSz-1)
+    yardok.pop(sSz-1)
     mentesFajlba()
     input('Sikeres törlés.')
 
